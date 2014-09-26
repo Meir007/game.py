@@ -1,0 +1,14 @@
+def main():
+    print "Proverka prostih chisel"
+    a=input("Vvedite vache chislo")
+    i=0#0Prostoe shislo
+    for p in range(2,a-1):
+        if a%p==0:
+            i=i+1
+            print "Chislo ne prostoe"
+            break;
+    if i==0:
+        print "Cislo prostoe"
+main()        
+                
+                   
