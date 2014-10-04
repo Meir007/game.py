@@ -1,0 +1,30 @@
+from graphics import *
+import time
+def main():
+        win=GraphWin("Patrick",300,300)
+        rect=Rectangle(Point(200,90),Point(220,100))
+        rect.setFill("blue")
+        rect.draw(win)
+        circ=Circle(Point(40,100),25)
+        circ.setFill("red")
+        circ.draw(win)
+        circ2=Circle(Point(150,125),25)
+        circ2.setFill("brown")
+        circ2.draw(win)
+        for i in range(46):
+            circ.move(5,0)
+            time.sleep(0.05)
+        for i in range(46):
+            circ2.move(-5,0)
+            time.sleep(0.05)
+        for i in range(46):
+            rect.move(5,0)
+            time.sleep(0.05)
+        for i in range(46):
+            rect.move(-5,0)
+            time.sleep(0.05)
+main()                
+                
+        
+    
+    
