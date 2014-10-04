@@ -1,0 +1,45 @@
+from graphics import*
+import time
+
+def main():
+    win=GraphWin("Animation",300,300)
+
+    rect=Rectangle(Point(200,90),Point(300,100))
+    rect.setFill("blue")
+    rect.draw(win)
+
+    head=Circle(Point(40,100),25)
+    head.setFill("yellow")
+    head.draw(win)
+
+    eye1=Circle(Point(30,105),5)
+    eye1.setFill("green")
+    eye1.draw(win)
+
+    eye2=Circle(Point(45,105),5)
+    eye2.setFill("green")
+    eye2.draw(win)
+
+    mouth=Oval(Point(30,90),Point(50,85))
+    mouth.setFill("red")
+    mouth.draw(win)
+
+    facelist=[head,eye1,eye2,mouth]
+
+    circ2=Circle(Point(150,125),25)
+    circ2.setFill("red")
+    circ2.draw(win)
+
+    moveAllOnline(facelist,5,0,46,0.05)
+    moveAllOnline(facelist,-5,0,46,0.05)
+
+def moveAllOnline(shapelist,dx,dy,reps,delay):
+    for i in range(reps):
+        moveAll(shapelist,dx,dy)
+        time.sleep(delay)
+
+def moveAll(shapelist,dx,dy):
+    for i in shapelist:
+          i.move(dx,dy)
+main()                        
+                
